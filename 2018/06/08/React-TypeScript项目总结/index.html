@@ -1,0 +1,858 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="React,TypeScript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="关于项目自从2018开年开始，我就开启了懒人模式，天天迷上打游戏，而新公司压力又不大所以划水到现在。前段时间想了想了这样下去不行，再这样下去就不能当上CEO,走上人生巅峰了😁。于是就又了这个项目。
+这个项目是慕课网的一个react课程,项目比较小，用的版本也比较低。 所以按教程一葫芦画瓢，肯定学不到什么东西，也没挑战。所以就想着用最新的react技术栈来学习这个项目，并用上了TypeScrip">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React & TypeScript项目总结">
+<meta property="og:url" content="https://lemontree2000.github.io/2018/06/08/React-TypeScript项目总结/index.html">
+<meta property="og:site_name" content="Lemontree.Blog">
+<meta property="og:description" content="关于项目自从2018开年开始，我就开启了懒人模式，天天迷上打游戏，而新公司压力又不大所以划水到现在。前段时间想了想了这样下去不行，再这样下去就不能当上CEO,走上人生巅峰了😁。于是就又了这个项目。
+这个项目是慕课网的一个react课程,项目比较小，用的版本也比较低。 所以按教程一葫芦画瓢，肯定学不到什么东西，也没挑战。所以就想着用最新的react技术栈来学习这个项目，并用上了TypeScrip">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/679fbae5gy1fs46nx9y21j211y0lc1kx.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/large/679fbae5gy1fs4ssdqjqzg20dw05k0xn.gif">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/679fbae5gy1fs4tbdiuc8g20nn09r43b.gif">
+<meta property="og:updated_time" content="2018-06-09T16:29:13.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React & TypeScript项目总结">
+<meta name="twitter:description" content="关于项目自从2018开年开始，我就开启了懒人模式，天天迷上打游戏，而新公司压力又不大所以划水到现在。前段时间想了想了这样下去不行，再这样下去就不能当上CEO,走上人生巅峰了😁。于是就又了这个项目。
+这个项目是慕课网的一个react课程,项目比较小，用的版本也比较低。 所以按教程一葫芦画瓢，肯定学不到什么东西，也没挑战。所以就想着用最新的react技术栈来学习这个项目，并用上了TypeScrip">
+<meta name="twitter:image" content="https://wx2.sinaimg.cn/large/679fbae5gy1fs46nx9y21j211y0lc1kx.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6365327645588063000',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lemontree2000.github.io/2018/06/08/React-TypeScript项目总结/"/>
+
+
+
+
+
+  <title> React & TypeScript项目总结 | Lemontree.Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?196a6fff951168b4be4c0a0223d03f13";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lemontree.Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">每个人的一生都是一场远行</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://lemontree2000.github.io/2018/06/08/React-TypeScript项目总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lemontree2000">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lemontree.Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                React & TypeScript项目总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-08T22:33:35+08:00">
+                2018-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <span class="post-wordcount">
+            <span class="post-meta-divider">|</span>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">字数统计</span>
+                  
+                    <span title="字数统计" }}">
+                      1,720字
+                    </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">阅读时长</span>
+                  
+                    <span title="阅读时长" }}">
+                      8
+                    </span>
+                    ~min
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://wx2.sinaimg.cn/large/679fbae5gy1fs46nx9y21j211y0lc1kx.jpg" alt="preview"></p>
+<h1 id="关于项目"><a href="#关于项目" class="headerlink" title="关于项目"></a>关于项目</h1><p>自从2018开年开始，我就开启了懒人模式，天天迷上打游戏，而新公司压力又不大所以划水到现在。前段时间想了想了这样下去不行，再这样下去就不能当上CEO,走上人生巅峰了😁。于是就又了这个项目。</p>
+<p>这个项目是慕课网的一个react课程,项目比较小，用的版本也比较低。 所以按教程一葫芦画瓢，肯定学不到什么东西，也没挑战。所以就想着用最新的react技术栈来学习这个项目，并用上了TypeScript。</p>
+<h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><p>TypeScript 是微软推出的强类型javascript的超集，最重要的特点就是类型检查。之前在做Vue项目的时候，很想用到项目里，后面因为Vue对TS的支持和上手难度的问题不了了之了。而react对TS比较好，社区里也有很多成熟的使用例子，所有就上了TS。</p>
+<a id="more"></a>
+<h1 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h1><ul>
+<li>create-react-app</li>
+<li>React</li>
+<li>TypeScript</li>
+<li>Less</li>
+</ul>
+<h1 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h1><p>1、 create-react-app</p>
+<p>create-react-app创建TypeScript项目模板</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 全局安装creat-react-app</span></div><div class="line">npm install creat-react-app -g</div><div class="line"><span class="comment"># 创建ts项目模板</span></div><div class="line">create-react-app my-app --scripts-version=react-scripts-ts</div></pre></td></tr></table></figure>
+<p>接下来配置Less,因为creat-react-app创建的项目是免配置的所以先要开启配置模式，暴露配置文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm run eject <span class="comment"># 暴露配置文件</span></div><div class="line">npm install less -save</div></pre></td></tr></table></figure>
+<p>开启配置后项目目录就多了好几个文件夹</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="addition">+  /config</span></div><div class="line"><span class="addition">+  /scripts</span></div></pre></td></tr></table></figure>
+<p>在以下文件修改配置：<br>/config/webpack.config.dev.js<br>/config/webpack.config.prod.js</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"></div><div class="line"><span class="deletion">-   test: /\.(css)$/,</span></div><div class="line"><span class="addition">+   test: /\.(css|less)$/,</span></div><div class="line">    use: [</div><div class="line">        require.resolve('style-loader'),</div><div class="line">        &#123;</div><div class="line">        loader: require.resolve('css-loader'),</div><div class="line">        options: &#123;</div><div class="line">            importLoaders: 1,</div><div class="line">        &#125;,</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">        loader: require.resolve('postcss-loader'),</div><div class="line">        options: &#123;</div><div class="line">            // Necessary for external CSS imports to work</div><div class="line">            // https://github.com/facebookincubator/create-react-app/issues/2677</div><div class="line">            ident: 'postcss',</div><div class="line">            plugins: () =&gt; [</div><div class="line">            require('postcss-flexbugs-fixes'),</div><div class="line">            autoprefixer(&#123;</div><div class="line">                browsers: [</div><div class="line">                "Android &gt; 4.1",</div><div class="line">                '&gt;1%',</div><div class="line">                'last 4 versions',</div><div class="line">                'Firefox ESR',</div><div class="line">                'not ie &lt; 9', // React doesn't support IE8 anyway</div><div class="line">                ],</div><div class="line">                flexbox: 'no-2009',</div><div class="line">            &#125;),</div><div class="line">            ],</div><div class="line">        &#125;,</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line"><span class="addition">+            loader: require.resolve('less-loader') // compiles Less to CSS</span></div><div class="line"><span class="addition">+        &#125;</span></div><div class="line">    ],</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p>环境准备好了，接下来就可以编码了，首先先写app.tsx</p>
+<h2 id="基础结构"><a href="#基础结构" class="headerlink" title="基础结构"></a>基础结构</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 结构 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">section</span> <span class="attr">className</span>=<span class="string">"stage"</span> <span class="attr">ref</span>=<span class="string">&#123;(node:</span> <span class="attr">HTMLElement</span>) =&gt;</span> &#123; this.stageDom = node &#125;&#125;&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">section</span> <span class="attr">className</span>=<span class="string">"img-sec"</span>&gt;</span></div><div class="line">          &#123;</div><div class="line">            imageArr.map((item, index) =&gt; &#123;</div><div class="line">              if (!this.state.imgsArrangeArr[index]) &#123;</div><div class="line">                this.state.imgsArrangeArr[index] = &#123;</div><div class="line">                  isCenter: false,</div><div class="line">                  isInverse: false,</div><div class="line">                  pos: &#123;</div><div class="line">                    left: 0,</div><div class="line">                    top: 0</div><div class="line">                  &#125;,</div><div class="line">                  rotate: 0</div><div class="line">                &#125;</div><div class="line">              &#125;</div><div class="line">              controllerUnits.push(</div><div class="line">                <span class="tag">&lt;<span class="name">ControllerUnit</span></span></div><div class="line">                  <span class="attr">inverse</span>=<span class="string">&#123;this.inverse(index)&#125;</span></div><div class="line">                  <span class="attr">arrange</span>=<span class="string">&#123;this.state.imgsArrangeArr[index]&#125;</span></div><div class="line">                  <span class="attr">center</span>=<span class="string">&#123;this.center(index)&#125;</span></div><div class="line">                  <span class="attr">key</span>=<span class="string">&#123;index&#125;</span> /&gt;</div><div class="line">              )</div><div class="line">              return (</div><div class="line">                <span class="tag">&lt;<span class="name">ImgFigure</span></span></div><div class="line">                  <span class="attr">key</span>=<span class="string">&#123;index&#125;</span> &#123;<span class="attr">...item</span>&#125;</div><div class="line">                  <span class="attr">index</span>=<span class="string">&#123;index&#125;</span></div><div class="line">                  <span class="attr">inverse</span>=<span class="string">&#123;this.inverse(index)&#125;</span></div><div class="line">                  <span class="attr">arrange</span>=<span class="string">&#123;this.state.imgsArrangeArr[index]&#125;</span></div><div class="line">                  <span class="attr">imgRef</span>=<span class="string">&#123;this.bindImgRefs&#125;</span></div><div class="line">                  <span class="attr">center</span>=<span class="string">&#123;this.center(index)&#125;</span></div><div class="line">                /&gt;</div><div class="line">              )</div><div class="line">            &#125;)</div><div class="line">          &#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">nav</span> <span class="attr">className</span>=<span class="string">"controller-nav"</span>&gt;</span></div><div class="line">          &#123;</div><div class="line">            controllerUnits</div><div class="line">          &#125;</div><div class="line">        <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>通过结构可以看到其中有两个子组件，stage容器通过ref获取真实DOM以便后续获取dom的一些属性,其中ref回调中的node是一个dom元素并定义了类型为HTMLElement，后续当我们用this.stageDom的时候就可以享受到TS带来的智能感应的福利，如下图。</p>
+<p><img src="https://wx4.sinaimg.cn/large/679fbae5gy1fs4ssdqjqzg20dw05k0xn.gif" alt="vscode"></p>
+<h2 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h2><blockquote>
+<p>ref 不仅可以获取真实DOM也可以获取React组件的实例，需要注意的是要获取的组件必须是类组件，因为函数组件是没有生命周期的。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</div><div class="line">  [x: string]: any;</div><div class="line">  public stageDom: HTMLElement;</div><div class="line">  public Constant = &#123;</div><div class="line">    <span class="attr">centerPos</span>: &#123;</div><div class="line">      <span class="attr">left</span>: <span class="number">0</span>,</div><div class="line">      <span class="attr">top</span>: <span class="number">0</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">hPosRange</span>: &#123; <span class="comment">// 水平方向的取值</span></div><div class="line">      leftSecX: [<span class="number">0</span>, <span class="number">0</span>],</div><div class="line">      <span class="attr">rightSecx</span>: [<span class="number">0</span>, <span class="number">0</span>],</div><div class="line">      <span class="attr">y</span>: [<span class="number">0</span>, <span class="number">0</span>]</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">vPosRange</span>: &#123; <span class="comment">// 垂直方向的取值</span></div><div class="line">      topY: [<span class="number">0</span>, <span class="number">0</span>],</div><div class="line">      <span class="attr">x</span>: [<span class="number">0</span>, <span class="number">0</span>]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  public state: IstateType;</div><div class="line">  <span class="keyword">constructor</span>(props: object) &#123;</div><div class="line">    <span class="keyword">super</span>(props);</div><div class="line">    <span class="keyword">this</span>.bindImgRefs = <span class="keyword">this</span>.bindImgRefs.bind(<span class="keyword">this</span>);</div><div class="line">    <span class="keyword">this</span>.inverse = <span class="keyword">this</span>.inverse.bind(<span class="keyword">this</span>);</div><div class="line">    <span class="keyword">this</span>.state = &#123;</div><div class="line">      <span class="attr">imgsArrangeArr</span>: [</div><div class="line">        <span class="comment">// &#123;</span></div><div class="line">        <span class="comment">//   pos: &#123;</span></div><div class="line">        <span class="comment">//     left: '0',</span></div><div class="line">        <span class="comment">//     top: '0'</span></div><div class="line">        <span class="comment">//   &#125;,</span></div><div class="line">        <span class="comment">//   rotate: 0,</span></div><div class="line">        <span class="comment">//   isInverse: false,</span></div><div class="line">        <span class="comment">//   isCenter: false,</span></div><div class="line">        <span class="comment">// &#125;</span></div><div class="line">      ]</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">/**</span></div><div class="line">   * 批量绑定ImgRefs方法</div><div class="line">   * @param node dom对象</div><div class="line">   * @param index 索引</div><div class="line">   */</div><div class="line">  public bindImgRefs(node: any, <span class="attr">index</span>: number): <span class="keyword">void</span> &#123;</div><div class="line">    <span class="keyword">this</span>[<span class="string">`figureImgDom<span class="subst">$&#123;index&#125;</span>`</span>] = node;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">/**</span></div><div class="line">   * @param index 要翻转图片的index</div><div class="line">   */</div><div class="line">  public inverse(index: number): any &#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">const</span> imgsArrangeArr = <span class="keyword">this</span>.state.imgsArrangeArr;</div><div class="line">      imgsArrangeArr[index].isInverse = !imgsArrangeArr[index].isInverse;</div><div class="line">      <span class="keyword">this</span>.setState(&#123;</div><div class="line">        imgsArrangeArr</div><div class="line">      &#125;)</div><div class="line">    &#125;;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public center(index: number) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">      <span class="keyword">this</span>.rearrange(index)</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">/**</span></div><div class="line">   * 重新布局所有图片</div><div class="line">   * @param centerIndex 指定中心是哪个图片</div><div class="line">   */</div><div class="line">  public rearrange(centerIndex: number) &#123;</div><div class="line">      ...</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// 组件挂载以后， 为每张图片计算其位置的范围</span></div><div class="line">  public componentDidMount() &#123;</div><div class="line">      ...</div><div class="line"></div><div class="line">    this.rearrange(<span class="number">0</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public render() &#123;</div><div class="line">    <span class="keyword">const</span> controllerUnits: any = [];</div><div class="line"></div><div class="line">    <span class="keyword">return</span> ...</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上js逻辑部分，其中rearrange是最重要的一个函数，用来计算各个图片的位置信息的，详细了解可以通过慕课视频。</p>
+<h2 id="public-amp-private"><a href="#public-amp-private" class="headerlink" title="public &amp; private"></a>public &amp; private</h2><blockquote>
+<p>在class声明内部变量和函数需要显式声明并且要用public 和 private区分是公私属性，并且声明类型。声明函数后尽量用jsdoc注释来解释函数的，后续在你调用的时候也有很友好的提示。</p>
+</blockquote>
+<p><img src="https://wx2.sinaimg.cn/large/679fbae5gy1fs4tbdiuc8g20nn09r43b.gif" alt="vscode2"></p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>在TypeScript中定义复杂形式的数据的时候可以用接口(interface)来实现</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 定义一个接口</span></div><div class="line"><span class="keyword">export</span> interface IimageArrType &#123;</div><div class="line">  <span class="attr">disc</span>: string,</div><div class="line">  <span class="attr">fileName</span>: string,</div><div class="line">  <span class="attr">title</span>: string,</div><div class="line">  imageUrl?: any,</div><div class="line">  imgRef?: any,</div><div class="line">  index?: number,</div><div class="line">  arrange?: any,</div><div class="line">  inverse?: any,</div><div class="line">  center?: any</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 使用接口</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPropsName</span>(<span class="params">prop:IimageArrType</span>):<span class="title">IimageArrType</span> </span>&#123;</div><div class="line">  <span class="keyword">return</span> prop;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>定义接口的时候命名尽量用大写的I开始命名,接口里面非必传参数可以加问号</p>
+</blockquote>
+<h2 id="其他组件"><a href="#其他组件" class="headerlink" title="其他组件"></a>其他组件</h2><h3 id="ControllerUnit-tsx"><a href="#ControllerUnit-tsx" class="headerlink" title="ControllerUnit.tsx"></a>ControllerUnit.tsx</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> interface IController &#123;</div><div class="line">    <span class="attr">arrange</span>: any,</div><div class="line">    <span class="attr">inverse</span>: any,</div><div class="line">    <span class="attr">center</span>: any</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ControllerUnit</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">IController</span>,</span>&#123;&#125;&gt; &#123;</div><div class="line"></div><div class="line">    <span class="keyword">constructor</span>(props: IController) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    public handleClick(e: any): <span class="keyword">void</span> &#123;</div><div class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>.props.arrange.isCenter) &#123;</div><div class="line">            <span class="keyword">this</span>.props.inverse();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">this</span>.props.center();</div><div class="line">        &#125;</div><div class="line">        e.preventDefault();</div><div class="line">        e.stopPropagation();</div><div class="line">    &#125;</div><div class="line">    public render() &#123;</div><div class="line">        <span class="keyword">let</span> controllerUnitClassName = <span class="string">"controller-unit"</span>;</div><div class="line">        <span class="comment">// 如果对应的是居中的图片， 显示控制按钮的居中态</span></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.props.arrange.isCenter) &#123;</div><div class="line">            controllerUnitClassName += <span class="string">" is-center"</span>;</div><div class="line">            <span class="comment">// 如果同时对于的是翻转图片，显示控制按钮的翻转态</span></div><div class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>.props.arrange.isInverse) &#123;</div><div class="line">                controllerUnitClassName += <span class="string">" is-inverse"</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">className</span>=<span class="string">&#123;controllerUnitClassName&#125;</span> <span class="attr">onClick</span>=<span class="string">&#123;this.handleClick&#125;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div><div class="line">        );</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> ControllerUnit;</div></pre></td></tr></table></figure>
+<h3 id="ImgFigure-tsx"><a href="#ImgFigure-tsx" class="headerlink" title="ImgFigure.tsx"></a>ImgFigure.tsx</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">"react"</span>;</div><div class="line"><span class="keyword">import</span> &#123; IimageArrType &#125; <span class="keyword">from</span> <span class="string">'../App/App'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImgFigure</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">IimageArrType</span>, </span>&#123;&#125;&gt; &#123;</div><div class="line">    <span class="keyword">constructor</span>(props: IimageArrType) &#123;</div><div class="line">        <span class="keyword">super</span>(props);</div><div class="line">        <span class="keyword">this</span>.handleClick = <span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>);</div><div class="line">    &#125;</div><div class="line">    public componentWillMount() &#123;</div><div class="line">        <span class="comment">// console.log(this.props);</span></div><div class="line">    &#125;</div><div class="line">    public handleClick(e: any) &#123;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.props.arrange.isCenter) &#123;</div><div class="line">            <span class="keyword">this</span>.props.inverse();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">this</span>.props.center();</div><div class="line">        &#125;</div><div class="line">        e.preventDefault();</div><div class="line">        e.stopPropagation();</div><div class="line">    &#125;</div><div class="line">    public render() &#123;</div><div class="line">        <span class="keyword">let</span> styles: any = &#123;&#125;;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.props.arrange.pos) &#123;</div><div class="line">            <span class="comment">// 防止内存引用</span></div><div class="line">            styles = <span class="built_in">Object</span>.assign(&#123;&#125;, <span class="keyword">this</span>.props.arrange.pos);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.props.arrange.rotate) &#123;</div><div class="line">            styles.transform = <span class="string">`rotate(<span class="subst">$&#123;<span class="keyword">this</span>.props.arrange.rotate&#125;</span>)`</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.props.arrange.isCenter) &#123;</div><div class="line">            styles.zIndex = <span class="number">11</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">let</span> imgFigureClassName = <span class="string">'img-figure'</span>;</div><div class="line">        imgFigureClassName += <span class="keyword">this</span>.props.arrange.isInverse ? <span class="string">' is-inverse'</span> : <span class="string">''</span>;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            <span class="xml"><span class="tag">&lt;<span class="name">figure</span></span></span></div><div class="line">                <span class="attr">className</span>=<span class="string">&#123;imgFigureClassName&#125;</span></div><div class="line">                <span class="attr">style</span>=<span class="string">&#123;styles&#125;</span></div><div class="line">                <span class="attr">onClick</span>=<span class="string">&#123;this.handleClick&#125;</span></div><div class="line">                <span class="attr">ref</span>=<span class="string">&#123;(node)</span> =&gt; &#123; this.props.imgRef(node, this.props.index) &#125;&#125;</div><div class="line">            &gt;</div><div class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#123;this.props.imageUrl&#125;</span> <span class="attr">alt</span>=<span class="string">&#123;this.props.title&#125;</span> /&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">figcaption</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">className</span>=<span class="string">"img-title"</span>&gt;</span>&#123;this.props.title&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">"img-back"</span> <span class="attr">onClick</span>=<span class="string">&#123;this.handleClick&#125;</span>&gt;</span></div><div class="line">                        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;this.props.disc&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></div><div class="line">            <span class="tag">&lt;/<span class="name">figure</span>&gt;</span></div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">export default ImgFigure;</div></pre></td></tr></table></figure>
+<h3 id="pros使用的注意"><a href="#pros使用的注意" class="headerlink" title="pros使用的注意"></a>pros使用的注意</h3><blockquote>
+<p>在ImgFigure组件中,props传入了一个对象arrange,一开始我直接把this.props.arrange.pos赋值给styles变量了,因为styles在render里面每次都会改变,导致后面操作图片的时候报错了.这是因为pos是个对象,直接赋值给styles相当于内存引用,而styles改变的时候,也会去尝试改变this.props.arrange. 因为props是只读的,所以会发生保持.这里的解决方法是对this.props.arrange.pos用Object.assign浅拷贝就好..</p>
+</blockquote>
+<h1 id="不足的地方"><a href="#不足的地方" class="headerlink" title="不足的地方"></a>不足的地方</h1><p>1、因为刚开始用ts,对一些简单的数据类型定义起来比较简单,但复杂的类型或涉及到react的类型就没有经验所以好多地方写了any类型。下次要对ts文档通读一遍。</p>
+<p>2、在许多地方都按照视频内容写的，没有深刻的思考原理。</p>
+<h1 id="要做的计划"><a href="#要做的计划" class="headerlink" title="要做的计划"></a>要做的计划</h1><p>后续还会优化这个项目：</p>
+<ul>
+<li><p>引入网络请求获取图片</p>
+</li>
+<li><p>引入redux管理状态</p>
+</li>
+<li><p>编写单元测试</p>
+</li>
+</ul>
+<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><p><a href="https://github.com/lemontree2000/react-gallery" target="_blank" rel="external">https://github.com/lemontree2000/react-gallery</a></p>
+
+      
+    </div>
+
+    
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+    
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+            <a href="/tags/TypeScript/" rel="tag"># TypeScript</a>
+          
+        </div>
+      
+      <div>
+          
+            
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/06/08/React-TypeScript项目总结/">React & TypeScript项目总结</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Lemontree2000 的个人博客">Lemontree2000</a></p>
+  <p><span>发布时间:</span>2018年06月08日 - 22:06</p>
+  <p><span>最后更新:</span>2018年06月10日 - 00:06</p>
+  <p><span>原始链接:</span><a href="/2018/06/08/React-TypeScript项目总结/" title="React & TypeScript项目总结">https://lemontree2000.github.io/2018/06/08/React-TypeScript项目总结/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://lemontree2000.github.io/2018/06/08/React-TypeScript项目总结/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+          
+    </div>
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/01/如何去练习/" rel="next" title="如何去练习">
+                <i class="fa fa-chevron-left"></i> 如何去练习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzIwNC8xMzczOA=="></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Lemontree2000" />
+          <p class="site-author-name" itemprop="name">Lemontree2000</p>
+           
+              <p class="site-description motion-element" itemprop="description">每个人的一生都是一场远行</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/lemontree2000" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/thislove520" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于项目"><span class="nav-number">1.</span> <span class="nav-text">关于项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TypeScript"><span class="nav-number">2.</span> <span class="nav-text">TypeScript</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术栈"><span class="nav-number">3.</span> <span class="nav-text">技术栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开发过程"><span class="nav-number">4.</span> <span class="nav-text">开发过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础结构"><span class="nav-number">4.1.</span> <span class="nav-text">基础结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ref"><span class="nav-number">4.2.</span> <span class="nav-text">ref</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#public-amp-private"><span class="nav-number">4.3.</span> <span class="nav-text">public & private</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口"><span class="nav-number">4.4.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他组件"><span class="nav-number">4.5.</span> <span class="nav-text">其他组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ControllerUnit-tsx"><span class="nav-number">4.5.1.</span> <span class="nav-text">ControllerUnit.tsx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ImgFigure-tsx"><span class="nav-number">4.5.2.</span> <span class="nav-text">ImgFigure.tsx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pros使用的注意"><span class="nav-number">4.5.3.</span> <span class="nav-text">pros使用的注意</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不足的地方"><span class="nav-number">5.</span> <span class="nav-text">不足的地方</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#要做的计划"><span class="nav-number">6.</span> <span class="nav-text">要做的计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github"><span class="nav-number">7.</span> <span class="nav-text">Github</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lemontree2000</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info"></div>
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
